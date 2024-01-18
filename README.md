@@ -3,7 +3,7 @@
 <p align="justify"> This repository contains a collection of resources used during the project for HackFest 2024. This project focuses on creating an Mobile Apps for User Customer using kotlin. </p>
 
 <p align="center">
-  <img src="Section 1.png" width=75% height=75% >
+  <img src="Customer.png" width=75% height=75% >
 </p>
 
 ## Contributing
