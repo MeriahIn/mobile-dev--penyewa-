@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/catering_nav"
+    app:startDestination="@id/cateringListFragment">
+
+    <fragment
+        android:id="@+id/cateringListFragment"
+        android:name="com.horehoreteam.sewain_hackathon2023.service.ServiceListFragment"
+        android:label="fragment_catering_list"
+        tools:layout="@layout/fragment_catering_list" >
+        <action
+            android:id="@+id/action_cateringListFragment_to_serviceDetailFragment"
+            app:destination="@id/serviceDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceDetailFragment"
+        android:name="com.horehoreteam.sewain_hackathon2023.service.ServiceDetailFragment"
+        android:label="fragment_service_detail"
+        tools:layout="@layout/fragment_service_detail" >
+        <action
+            android:id="@+id/action_serviceDetailFragment_to_nav_graph"
+            app:destination="@id/nav_graph" />
+        <action
+            android:id="@+id/action_serviceDetailFragment_to_serviceOrderFragment"
+            app:destination="@id/serviceOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceOrderFragment"
+        android:name="com.horehoreteam.sewain_hackathon2023.service.ServiceOrderFragment"
+        android:label="fragment_service_order"
+        tools:layout="@layout/fragment_service_order" >
+        <action
+            android:id="@+id/action_serviceOrderFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethodFragment"
+        android:name="com.horehoreteam.sewain_hackathon2023.service.PaymentMethodFragment"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" >
+        <action
+            android:id="@+id/action_paymentMethodFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.horehoreteam.sewain_hackathon2023.service.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+
+
+</navigation>

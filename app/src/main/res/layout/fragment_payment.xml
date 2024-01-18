@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="24dp"
+    tools:context=".service.PaymentFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/aciv_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="24dp"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextView.Grey.16Sp.BoldInter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_extra_bold"
+        android:text="Pembayaran"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/aciv_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/aciv_back" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actv_selected_payment"
+        style="@style/TextView.Grey.12Sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:drawableEnd="@drawable/ic_mandiri"
+        android:fontFamily="@font/inter_extra_bold"
+        android:text="Bank Mandiri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/aciv_back"
+        app:layout_constraintTop_toBottomOf="@id/aciv_back" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actv_virtual_info"
+        style="@style/TextView.Grey.12Sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter_light"
+        android:text="No. Virtual"
+        app:layout_constraintStart_toStartOf="@id/aciv_back"
+        app:layout_constraintTop_toBottomOf="@id/actv_selected_payment" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actv_copy"
+        style="@style/TextView.Grey.12Sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/inter_extra_bold"
+        android:text="Salin"
+        android:textColor="@color/blue_250"
+        app:layout_constraintEnd_toEndOf="@id/actv_virtual_info"
+        app:layout_constraintTop_toBottomOf="@id/actv_virtual_info" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actv_virtual_no"
+        style="@style/TextView.Grey.16Sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="896 0851 6253 1013"
+        app:layout_constraintEnd_toStartOf="@id/actv_copy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actv_virtual_info" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white_100"
+        app:layout_constraintTop_toBottomOf="@id/actv_virtual_no" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actv_info_total"
+        style="@style/TextView.Grey.16Sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter_light"
+        android:text="Total"
+        app:layout_constraintStart_toStartOf="@id/actv_virtual_no"
+        app:layout_constraintTop_toBottomOf="@id/separator" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actv_total"
+        style="@style/TextView.Grey.16Sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_extra_bold"
+        android:text="Rp 1.605.000,00"
+        app:layout_constraintBottom_toBottomOf="@id/actv_info_total"
+        app:layout_constraintEnd_toEndOf="@id/actv_copy"
+        app:layout_constraintTop_toTopOf="@id/actv_info_total" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/actv_info_total"
+        app:layout_constraintStart_toStartOf="@id/actv_info_total"
+        style="@style/TextView.Grey"
+        android:id="@+id/actv_info_duration"
+        android:fontFamily="@font/inter_light"
+        android:text="Bayar dalam"
+        android:textSize="10sp"
+        android:textColor="@color/grey_200"
+        android:drawableStart="@drawable/ic_clock"
+        android:drawablePadding="4dp"
+        android:layout_marginTop="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/actv_info_duration"
+        app:layout_constraintEnd_toEndOf="@id/actv_total"
+        style="@style/TextView.Grey"
+        android:fontFamily="@font/inter_light"
+        android:text="23 Jam 50 Menit"
+        android:textSize="10sp"
+        android:textColor="@color/red_100"
+        android:drawablePadding="4dp"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="21dp"
+        app:cardCornerRadius="8dp"
+        app:contentPaddingBottom="12dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/actv_info_duration"
+        app:strokeColor="@color/grey_300"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actv_transfer"
+                style="@style/TextView.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/inter_extra_bold"
+                android:text="Petunjuk Transfer MBanking"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TableLayout
+                android:id="@+id/tl_mbanking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/actv_transfer">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView.Grey.12Sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_light"
+                        android:textColor="@color/grey_200"
+                        android:text="1."
+                        android:layout_marginEnd="8dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView.Grey.12Sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_light"
+                        android:textColor="@color/grey_200"
+                        android:inputType="textMultiLine"
+                        android:layout_weight="1"
+                        android:text="Login Ke MBanking mu. Pilih Payment kemudian pilih e-Commerce"
+                        android:layout_marginEnd="8dp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView.Grey.12Sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_light"
+                        android:textColor="@color/grey_200"
+                        android:text="2."
+                        android:layout_marginEnd="8dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView.Grey.12Sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_light"
+                        android:textColor="@color/grey_200"
+                        android:inputType="textMultiLine"
+                        android:layout_weight="1"
+                        android:text="Pilih penyedia layanan : dan masukkan nomor virtual account 896 0851 6253 1013 kemudian pilih lanjut"
+                        android:layout_marginEnd="8dp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView.Grey.12Sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_light"
+                        android:textColor="@color/grey_200"
+                        android:text="3."
+                        android:layout_marginEnd="8dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView.Grey.12Sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_light"
+                        android:textColor="@color/grey_200"
+                        android:inputType="textMultiLine"
+                        android:layout_weight="1"
+                        android:text="Periksa informasi yang tertera di layar. pastikan Pastikan merchant adalah ADOline.id, pastikan total tagihan sudah benar dan username benar kemudian pilih &amp; klik OK"
+                        android:layout_marginEnd="8dp"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_credit_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="8dp"
+        app:contentPaddingBottom="12dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/mcv_transfer"
+        app:strokeColor="@color/grey_300"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actv_info_credit_card"
+                style="@style/TextView.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/inter_extra_bold"
+                android:text="Petunjuk Transfer iBanking"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/actv_info_credit_card">
+
+            </RadioGroup>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="8dp"
+        app:contentPaddingBottom="12dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/mcv_credit_card"
+        app:strokeColor="@color/grey_300"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actv_other"
+                style="@style/TextView.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/inter_extra_bold"
+                android:text="Petunjuk Transfer ATM"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/actv_other">
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

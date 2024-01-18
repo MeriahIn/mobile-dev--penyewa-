@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <solid android:color="@color/green_200"/>
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+
+    <item>
+        <inset android:drawable="@drawable/ic_checklist" android:insetTop="21dp" android:insetBottom="21dp" android:insetLeft="17dp" android:insetRight="17dp"/>
+    </item>
+</layer-list>

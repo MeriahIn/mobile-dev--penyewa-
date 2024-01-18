@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:behavior_skipCollapsed="true"
+    app:behavior_hideable="true"
+    android:paddingBottom="12dp"
+    android:elevation="1dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="24dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_container"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="382dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/wedding"/>
+        </com.google.android.material.card.MaterialCardView>
+        
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_service_info"
+            style="@style/TextView.Grey700.16Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Pelayanan"
+            android:fontFamily="@font/inter_medium"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/mcv_container"
+            app:layout_constraintStart_toStartOf="parent"/>
+        
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_catering"
+            style="@style/TextView.White.12sp"
+            android:background="@drawable/text_view_blue500_rad100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_100"
+            android:text="Layanan Catering"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="4dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/tv_service_info"
+            app:layout_constraintTop_toBottomOf="@id/tv_service_info"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_wardrobe"
+            style="@style/TextView.White.12sp"
+            android:background="@drawable/text_view_blue500_rad100"
+            android:backgroundTint="@color/grey_300"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_100"
+            android:text="Layanan Wardrobe"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="4dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@id/tv_catering"
+            app:layout_constraintStart_toEndOf="@id/tv_catering"
+            app:layout_constraintBottom_toBottomOf="@id/tv_catering"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_decor"
+            style="@style/TextView.White.12sp"
+            android:background="@drawable/text_view_blue500_rad100"
+            android:backgroundTint="@color/grey_300"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_100"
+            android:text="Layanan Dekorasi Pesta"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="4dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_catering"
+            app:layout_constraintStart_toStartOf="@id/tv_catering"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_info"
+            style="@style/TextView.Grey700.16Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List Layanan yang ingin diajukan"
+            android:fontFamily="@font/inter_medium"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_decor"
+            app:layout_constraintStart_toStartOf="@id/tv_decor"/>
+            
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/service_1"
+                style="@style/TextView.Grey500.12Sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_check_box"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:text="AA Catering\nPernikahan"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@id/tv_info"
+                app:layout_constraintTop_toBottomOf="@id/tv_info"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextView.Grey500.12Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_check_box"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="AA Koki Pribadi"
+            app:layout_constraintStart_toEndOf="@id/service_1"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@id/service_1"
+            app:layout_constraintBottom_toBottomOf="@id/service_1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/service_3"
+            style="@style/TextView.Grey500.12Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_check_box_unchecked"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="AA Koki Pribadi"
+            app:layout_constraintTop_toBottomOf="@id/service_1"
+            app:layout_constraintStart_toStartOf="@id/service_1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_submit"
+            style="@style/TextView.Grey700.16Sp"
+            android:background="@drawable/text_view_blue500_rad100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_100"
+            android:text="Submit"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/service_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
